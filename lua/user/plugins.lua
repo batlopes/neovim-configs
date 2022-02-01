@@ -61,7 +61,14 @@ return packer.startup(function(use)
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  -- use "lunarvim/darkplus.nvim"
+  use "joshdick/onedark.vim"
+  use "morhetz/gruvbox"
+  use "NLKNguyen/papercolor-theme"
+  use {"folke/tokyonight.nvim", opt=true}
+  use {"dracula/vim", opt=true}
+  use {"sonph/onehalf", rtp="vim/", opt=true}
+  use {"drewtempelmeyer/palenight.vim", opt=true}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
