@@ -41,9 +41,14 @@ local branch = {
 	icon = "",
 }
 
+local virtualenv = function ()
+  local venv = vim.env.VIRTUAL_ENV
+  return string.format("(%s)", venv:match(".*/([^/]+)$"))
+end
+
 local location = function ()
-  local r,c = unpack(vim.api.nvim_win_get_cursor(0))
-  return string.format(" %d:%d ", r, c+1)
+  local cursor = vim.api.nvim_win_get_cursor(0)
+  return string.format(" %d:%d ", cursor[1], cursor[2]+1)
 end
 -- local location = {
 -- 	"location",
@@ -79,10 +84,10 @@ lualine.setup({
 	},
 	sections = {
 		lualine_a = { mode},
-		lualine_b = { branch, diagnostics },
+		lualine_b = { branch, diff },
 		lualine_c = {},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { diff, spaces, "encoding", filetype },
+		lualine_x = { diagnostics, virtualenv, filetype, spaces, "encoding"},
 		lualine_y = {},
 		lualine_z = { location, progress },
 	},
