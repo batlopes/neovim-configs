@@ -95,6 +95,10 @@ return packer.startup(function(use)
     requires = "kyazdani42/nvim-web-devicons",
   }
 
+-- Debugging
+  use 'mfussenegger/nvim-dap'
+  use 'mfussenegger/nvim-dap-python'
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 

@@ -68,3 +68,15 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+
+-- Dap --
+keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
+-- keymap("n", "<F6>", "<cmd>lua require'dap'.repl.open()<cr>", opts)
+keymap("n", "<F6>", "<cmd>lua _DAP_SIDE_SCOPE()<cr>", opts)
+keymap("n", "<F8>", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
+keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<F11>", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<F12>", "<cmd>lua require'dap'.step_out()<cr>", opts)
+keymap("n", "<F7>", "<cmd>lua require'dap'.repl.open()<cr>", opts)
+
+
