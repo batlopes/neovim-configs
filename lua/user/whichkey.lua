@@ -170,7 +170,7 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
-
+  
   t = {
     name = "Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
@@ -180,6 +180,15 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
+  x = {
+    name = "Trouble",
+    c = {"<cmd>TroubleClose<cr>", "Close Trouble"},
+    d = {"<cmd>TroubleToggle document_diagnostics<cr>", "Toggle Trouble document diagnostic"},
+    l = {"<cmd>TroubleToggle loclist<cr>", "Toggle Trouble workspace diagnostic"},
+    q = {"<cmd>TroubleToggle quickfix<cr>", "Toggle Trouble workspace diagnostic"},
+    w = {"<cmd>TroubleToggle workspace_diagnostics<cr>", "Toggle Trouble workspace diagnostic"},
+    x = {"<cmd>TroubleToggle<cr>", "Toggle Trouble"},
   },
 }
 
