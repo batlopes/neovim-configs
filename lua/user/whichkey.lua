@@ -181,6 +181,13 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  T = {
+    name = "Telescope",
+    b = {"<cmd> Telescope git_branches<cr>", "Git Branches"},
+    c = {"<cmd> Telescope git_commits<cr>", "Git Commits"},
+    s = {"<cmd> Telescope git_status<cr>", "Git Status"},
+    S = {"<cmd> Telescope git_stash<cr>", "Git Stash"},
+  },
   x = {
     name = "Trouble",
     c = {"<cmd>TroubleClose<cr>", "Close Trouble"},
