@@ -79,4 +79,6 @@ keymap("n", "<F11>", "<cmd>lua require'dap'.step_into()<cr>", opts)
 keymap("n", "<F12>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 keymap("n", "<F7>", "<cmd>lua require'dap'.repl.open()<cr>", opts)
 
-
+-- Other keymaps --
+keymap("n", "<C-s>", ":w<cr>", opts)
+keymap("n", "<C-q><C-q>", ":q<cr>", opts)
